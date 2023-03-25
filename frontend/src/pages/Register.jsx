@@ -28,7 +28,7 @@ function Register() {
       navigate("/");
     }
     dispatch(reset());
-  });
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const HandleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
